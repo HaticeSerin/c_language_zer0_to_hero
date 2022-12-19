@@ -2,27 +2,17 @@
 // Bu oranı bilmek özellikle sınav veya ödev sorusunda kenar uzunlukları tam sayı yerine değişkenler cinsinden verdiğinde kullanışlıdır.
 // fonksiyon ile yapılmıştır
 
-#include <tgmath.h>
-#include "stdio.h"
-#include  "string.h"
-#include  "stdlib.h"
-#include  "string.h"
+#include"stdio.h"
+#include"math.h"
 
-void hypotenuse(int kenar1, int kenar2) {
-    float sonuc;
-    sonuc = sqrt(kenar1 * kenar1 + kenar2 * kenar2);
-    printf("Hipotenüs: %f", sonuc);
-
-}
-
-int main() {
-    int kenar1, kenar2;
-   
-    printf("Enter the value of kenar 1 : ");
-    scanf("%d", &kenar1);
-    printf("Enter the value of kenar 2 : ");
-    scanf("%d", &kenar2);
-    hypotenuse(kenar1, kenar2);
-
-
+int main(){
+	int kenar1,kenar2;
+	float hypotenuse;
+	printf("Enter a kenar1:\n");
+	scanf("%d",&kenar1);
+	printf("Enter a kenar2:\n");
+	scanf("%d",&kenar2);
+	hypotenuse=sqrt(kenar1*kenar1+kenar2*kenar2);
+	printf("Hypotenuse :%.2f",hypotenuse);
+	return 0;
 }

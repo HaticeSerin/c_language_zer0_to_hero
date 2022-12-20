@@ -1,24 +1,27 @@
 // union
-
-#include <stdio.h>
-#include <stdlib.h>
-
-union data {
-    int sayi;
-    float ondalik;
-    char yazi[20];
+#include"stdio.h"
+#include"stdlib.h"
+#include"string.h"
+union student{
+	int numara;
+	float sinavnotu;
+	char isim[20];	
 };
-
-int main() {
-    union data veri;
-    printf("Enter an integer: ");
-    scanf("%d", &veri.sayi);
-    printf("Sayi: %d \n", veri.sayi);
-    printf("Enter a float: ");
-    scanf("%f", &veri.ondalik);
-    printf("Ondalik: %f \n", veri.ondalik);
-    printf("Enter a string: ");
-    scanf("%s", veri.yazi);
-    printf("Yazi: %s \n", veri.yazi);
-    return 0;
+int main(){
+	union student veri;
+	basla:
+	printf("Enter your name:");
+	scanf("%s",veri.isim);
+	printf("Enter your number: ");
+	scanf("%d",&veri.numara);
+	printf("Enter your exam grade: ");
+	scanf("%f",&veri.sinavnotu);
+	if(veri.sinavnotu<50){
+		printf("Your exam grade %.2f .You failed the exam.\n",veri.sinavnotu);
+	}
+	else{
+		printf("Your exam grade %.2f .You passed the exam.\n",veri.sinavnotu);
+	}
+	goto basla;
+	return 0;
 }
